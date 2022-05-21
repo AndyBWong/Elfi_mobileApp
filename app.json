@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "elfi_mobile",
+    "slug": "elfi_mobile",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
