@@ -1,0 +1,74 @@
+# Query: console.log
+# ContextLines: 1
+
+34 résultats - Fichiers 8
+
+App.js:
+  67  
+  68:     SetIsLogedIn().catch(e=> console.log(e.message));
+  69    }, [isLogedIn])
+
+components\functions.js:
+  110    });
+  112    const promise = fetch(url, myInit);
+
+components\ProductCard.js:
+  21    const { product } = props;
+  24    const dispatch = useDispatch();
+
+  49  
+  51        Alert.alert("Produit ajouté au panier !");
+
+components\ProductCart.js:
+  21    const { product } = props;
+  25    const dispatch = useDispatch();
+
+  38  
+  40        Alert.alert("Produit ajouté au panier !");
+
+screen\Connexion.js:
+  45        const content = await response.json();
+  47  
+
+  59          );
+  62        }else {
+
+  68          setErrorMessage(content["status_message"])
+  71        }
+  72      })
+  73:     .catch(e => console.log(e.message));
+  74    }
+
+screen\Inscription.js:
+  57        const content = await response.json();
+  59   
+
+  68          );
+  71        }else{
+
+  74          dispatch(logOut());
+  77        }
+  78      })
+  79:     .catch(e => console.log(e.message));
+  80  
+  82    }
+
+screen\SearchPage.js:
+  56      getData()
+  57:     .catch(e => console.log(e.message));
+  59    }, [page, switchState]);
+
+screen\UserCart.js:
+  31    const mail = useSelector((state)=>state.userInfoReducer.mail);
+  33    const dispatch = useDispatch();
+
+  43      promise.then(async (response) => {
+  45        const content = await response.json();
+
+  47        if (content["status"] == true) {
+  51          dispatch(dropCart());
+  52        } else {
+  56        }
+
+  75            {products.map((p) => {
+  78              return (
